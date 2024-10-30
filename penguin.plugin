@@ -5,6 +5,6 @@
 .*gdt_mview.* reject-dict
 .*qiekj.*version.* reject-dict
 [Script]
-http-response .*penguinvip.* requires-body=1,script-path=https://raw.githubusercontent.com/AshxL/My-Loon-Plugin/refs/heads/main/penguin.js,enable=true
+http-response ^https?:\/\/userapi\.qiekj\.com\/penguinvip\/accountDetail\? requires-body=1,script-path=https://raw.githubusercontent.com/AshxL/My-Loon-Plugin/refs/heads/main/penguin.js,enable=true
 [MITM]
 hostname = gdt.qq.com,baichuan-sdk.alicdn.com,userapi.qiekj.com
