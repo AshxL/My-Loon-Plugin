@@ -1,1 +1,10 @@
-
+#!name=胖乖生活去广告
+#!desc=胖乖生活去广告vip
+[URL Rewrite]
+.*fg_rulen* reject-dict
+.*gdt_mview.* reject-dict
+.*qiekj.*version.* reject-dict
+[Script]
+http-response .*penguinvip.* requires-body=1,script-path=penguin.js
+[MITM]
+hostname = gdt.qq.com,baichuan-sdk.alicdn.com,userapi.qiekj.com
