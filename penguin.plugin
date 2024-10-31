@@ -1,5 +1,5 @@
 #!name=胖乖生活去广告
-#!desc=胖乖生活去广告和本地1vip
+#!desc=胖乖生活去广告和本地2vip
 
 [URL Rewrite]
 .*fg_rule.* reject-dict
