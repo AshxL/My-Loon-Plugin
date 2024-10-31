@@ -1,13 +1,11 @@
 #!name=胖乖生活去广告
-#!desc=胖乖生活去广告和本地2vip
+#!desc=胖乖生活去广告和本地vip4
 
-[URL Rewrite]
+[Rewrite]
+.*penguinvip.* response-body-json-replace data.status 0
 .*fg_rule.* reject-dict
 .*gdt_mview.* reject-dict
 .*qiekj.*version.* reject-dict
 
-[Script]
-http-response .*penguinvip.* requires-body=1,script-path=https://raw.githubusercontent.com/AshxL/My-Loon-Plugin/refs/heads/main/penguin.js
-
 [MITM]
-hostname = gdt.qq.com,baichuan-sdk.alicdn.com,userapi.qiekj.com
+hostname = userapi.qiekj.com,baichuan-sdk.alicdn.com,gdt.qq.com
