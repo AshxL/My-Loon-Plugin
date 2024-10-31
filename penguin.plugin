@@ -1,12 +1,12 @@
-#!name=胖乖生活去广告7
+#!name=胖乖生活去广告8
 #!desc=胖乖生活去广告和本地vip
 
 [Rewrite]
+.*sdk.e.qq.com.* reject
 .*penguinvip.* response-body-json-replace data.status 0
 .*userapi.qiekj.com/user/info.* response-body-json-replace data.hasVip true
 .*userapi.qiekj.com/penguinvip/config.* reject-dict
 .*userapi.qiekj.com/slot/get.* reject-dict
-.*userapi.qiekj.com/appTitle/get.* reject-dict
 .*userapi.qiekj.com/task/list.* reject-dict
 .*userapi.qiekj.com/cashierMarketing/queryCashierMarketingList.* reject-dict
 .*userapi.qiekj.com/integralRecord/integralDailStatistics.* reject-dict
